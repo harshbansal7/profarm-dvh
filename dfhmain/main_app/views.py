@@ -124,4 +124,4 @@ def apiview(request, n, p, k, soilph, humidity, temp, rainfall):
         }
         return JsonResponse(context, status=status.HTTP_200_OK)
     except:
-        return JsonResponse('failed', safe = False, status=status.HTTP_404)
+        return HttpResponse(404)
