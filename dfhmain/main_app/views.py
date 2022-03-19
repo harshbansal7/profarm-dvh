@@ -1,10 +1,9 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
+# REST API
 
-from rest_framework.response import Response
 from rest_framework import status
-from rest_framework import permissions
 
 # IMPORTS
 
