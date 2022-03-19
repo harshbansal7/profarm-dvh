@@ -1,0 +1,304 @@
+/* ==================================================
+*	01 - media screen and (max-width: 1440px)
+*	02 - media screen and (max-width: 1280px)
+*	03 - media screen and (max-width: 1199px)
+*	04 - media screen and (max-width: 991px)
+*	05 - media screen and (max-width: 767px)
+*	06 - media screen and (max-width: 680px)
+*	07 - media screen and (max-width: 580px)
+*	08 - media screen and (max-width: 480px)
+*	09 - media screen and (max-width: 380px)
+*	10 - media screen and (max-width: 320px)
+================================================== */
+@media screen and (min-width: 1441px) {
+
+
+	.form-content {
+		padding-top: 110px;
+		padding-left: 120px;
+		padding-right: 15%;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+
+	.steps-area-fixed {
+		position: fixed;
+	}
+
+	.steps-area-fixed + .multisteps-form__form {
+		margin-left: 360px;
+	}
+
+	.steps {
+		left: 250px;
+	}
+
+	.step-box-content .step-box-text h3 {
+		font-size: 22px;
+	}
+
+	.form-content {
+		padding-top: 55px;
+		padding-left: 80px;
+		padding-right: 4%;
+	}
+
+	.actions {
+		right: 4%;
+		bottom: 0;
+	}
+
+	.form-content h2 {
+		font-size: 42px;
+	}
+
+	.form-content p {
+		font-size: 22px;
+	}
+
+	.image-holder {
+		width: 490px;
+		overflow: hidden;
+
+		img {
+			object-fit: cover;
+			height: 100%;
+			object-position: 79%;
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+
+	.form-content h2 {
+		font-size: 40px;
+	}
+
+	.form-content p {
+		font-size: 22px;
+	}
+
+	.budget-area .opti-list li {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.steps-area-fixed {
+		position: static;
+		width: 100% !important;
+	}
+	.steps-area .steps {
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.steps-area-fixed + .multisteps-form__form {
+		margin-left: 0;
+	}
+	.steps-area,
+	.multisteps-form__form {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.image-holder {
+		width: 100%;
+		height: 250px;
+		display: block;
+		overflow: hidden;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	.form-content {
+		width: 100%;
+		padding-right: 80px;
+	}
+
+	.inner {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.steps li {
+		display: inline-block;
+		margin-right: 80px;
+	}
+
+	.steps li span:before {
+		display: none;
+	}
+
+	.steps li.js-active span:after {
+		width: 100px;
+		height: 2px !important;
+		right: -100px;
+		top: 20px;
+	}
+
+	.actions {
+		padding: 30px 0px 50px;
+		position: static;
+		margin-right: 80px;
+		float: right;
+	}
+
+	.form-content h2 {
+		padding: 50px 0px 20px 0px;
+	}
+
+	.actions ul {
+		display: block;
+
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.pb-100, .pb-200 {
+		padding-bottom: 30px;
+	}
+
+	.wizard {
+		max-width: 100%;
+	}
+
+	.image-holder {
+		img {
+			height: 521px;
+			object-fit: cover;
+		}
+	}
+
+	.actions {
+		position: static;
+		padding-right: 10px;
+	}
+
+	.steps {
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.steps li {
+		display: inline-block;
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+
+	.form-content h2 {
+		font-size: 26px;
+	}
+
+	.form-content p {
+		font-size: 18px;
+	}
+
+	.step-box-content {
+		margin-bottom: 30px;
+	}
+
+	.step-progress {
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+
+	.form-content .step-no {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.upload-documents .upload-option {
+		float: none;
+	}
+
+	.budget-area .opti-list li {
+		margin-bottom: 20px;
+	}
+
+	.plan-icon-text {
+		margin-bottom: 20px;
+	}
+
+	.plan-icon-text {
+		width: 100%;
+	}
+
+	.step-inner-content {
+		padding-bottom: 50px;
+	}
+
+	.budget-area .opti-list li {
+		font-size: 14px;
+	}
+
+	.actions {
+		position: static;
+		padding-right: 0;
+		margin-right: auto;
+		margin-left: auto;
+		float: none;
+		padding: 0;
+		ul {
+			display: flex;
+		}
+		li span {
+			height: 60px;
+			width: 170px;
+			line-height: 60px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 580px) {
+
+	.steps li {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.steps li.js-active span:after {
+		width: 70px;
+		height: 2px !important;
+		right: -70px;
+		top: 19px;
+	}
+
+	.form-content {
+		width: 100%;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+
+}
+
+
+@media screen and (max-width: 460px) {
+
+	.steps li {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.steps li.js-active span:after {
+		width: 60px;
+		right: -60px;
+	}
+
+}

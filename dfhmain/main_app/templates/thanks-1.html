@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>thank you 1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'assets_ty/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets_ty/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'assets_ty/css/style.css' %}">
+</head>
+<body>
+	<!-- Start of thank you section
+ 	============================================= -->
+ 	<section id="thank-you" class="thank-you-section">
+ 		<div class="container">
+ 			<div class="thank-you-wrapper position-relative thank-wrapper-style-one">
+ 				<!-- <div class="thank-you-close text-center">x</div> -->
+ 				<div class="thank-txt text-center">
+ 					<div class="thank-icon">
+ 						<img src="{% static 'assets_ty/img/tht1.png' %}" alt="">
+ 					</div>
+ 					<h1>{% if not isYield %}Crop Recommendation : {{crop_name}}{% endif %}{% if isYield %} Yield - {{yield}} Tonnes / Hectare <br> Net Production - {{netprod}} Tonnes{% endif %}	</h1>
+ 					<br><p>Thank you for choosing us to determine whats best for your Farm. Happy Farming</p>
+					<p>Calculation Accuracy -> {{accuracy}}%</p>
+					{% if not isYield %}
+						<a class="d-block text-center text-uppercase" href="https://en.wikipedia.org/wiki/{{crop_name}}">More @ Wikipedia</a> 
+					{% endif %}
+					<br>
+					<a class="d-block text-center text-uppercase" href="{% url 'main_app:home' %}">Back to Home</a> 
+ 				</div>
+ 				<div class="th-bottom-vector position-absolute">
+ 					<img src="{% static 'assets_ty/img/tv1.png' %}" alt="">
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</section>
+ 	<!-- End of thank you section
+ 	============================================= -->
+
+	<script src="{% static 'assets_ty/js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'assets_ty/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets_ty/js/main.js' %}"></script>
+</body>
+</html>

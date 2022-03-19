@@ -1,0 +1,405 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Digital Village Hackathon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/colors/switch.css' %}">
+	<!-- Color Alternatives -->
+	<link href="{% static 'assets/css/colors/color-2.css' %}" rel="alternate stylesheet" type="text/css" title="color-2">
+	<link href="{% static 'assets/css/colors/color-3.css' %}" rel="alternate stylesheet" type="text/css" title="color-3">
+	<link href="{% static 'assets/css/colors/color-4.css' %}" rel="alternate stylesheet" type="text/css" title="color-4">
+	<link href="{% static 'assets/css/colors/color-5.css' %}" rel="alternate stylesheet" type="text/css" title="color-5">
+</head>
+
+<body>
+
+	<!-- This code is use for color chooser, you can delete -->
+	<div id="switch-color" class="color-switcher">
+		<div class="open"><i class="fas fa-cog"></i></div>
+		<h4>COLOR OPTION</h4>
+		<ul>
+			<li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+
+	
+	<div class="wrapper">
+		<div class="steps-area steps-area-fixed">
+			<div class="image-holder">
+				<img src="{% static 'assets/img/side-img.png' %}" alt="">
+			</div>
+			<div class="steps clearfix">
+				<ul class="tablist multisteps-form__progress">
+					<li class="multisteps-form__progress-btn js-active current">
+						<span>1</span>
+					</li>
+					<li class="multisteps-form__progress-btn">
+						<span>2</span>
+					</li>
+					<li class="multisteps-form__progress-btn last">
+						<span>3</span>
+					</li>
+					<!-- <li class="multisteps-form__progress-btn">
+						<span>4</span>
+					</li>
+					<li class="multisteps-form__progress-btn last">
+						<span>5</span>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<form class="multisteps-form__form" id="wizard" method="GET">
+			<div class="form-area position-relative">
+				<!-- div 1 -->
+				<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no">Step 1</span>
+									<h2>What kind of Services You need?</h2>
+									<p>Choose from a variety of Free and Paid Services that suits your needs.</p>
+									<div class="step-box">
+										<div class="row">
+											<div class="col-md-4">
+												<label class="step-box-content bg-white text-center relative-position active">
+													<span class="step-box-icon">
+														<img src="{% static 'assets/img/d1.png' %}" alt="">
+													</span>
+													<span class="step-box-text">
+														Crop Choice Prediction
+													</span>
+													<span>Using NPK and other Environmental Factors</span>
+													<span class="service-check-option">
+														<span><input id="condition0" type="radio" name="service_name" value="NPK Calculator" checked></span>
+													</span>
+												</label>
+											</div>
+											<div class="col-md-4">
+												<label class="step-box-content bg-white text-center relative-position">
+													<span class="step-box-icon">
+														<img src="{% static 'assets/img/d2.png' %}" alt="">
+													</span>
+													<span class="step-box-text">
+														Regional Yield Calculator 
+													</span>
+													<span>Based on Region, Crop and Season</span>
+													<span class="service-check-option">
+														<span><input id="condition1" type="radio" name="service_name" value="RCS Calculator"></span>
+													</span>
+												</label>
+											</div>
+											<!-- <div class="col-md-4">
+												<label class="step-box-content bg-white text-center relative-position">
+													<span class="step-box-icon">
+														<img src="{% static 'assets/img/d3.png' %}" alt="">
+													</span>
+													<span class="step-box-text">
+														Development
+													</span>
+													<span class="service-check-option">
+														<span><input type="radio" name="service_name" value="Development Services"></span>
+													</span>
+												</label>
+											</div> -->
+										</div>
+										<div class="row conditional" data-condition="#condition1 && service_name == 'Freelancing Services'">
+											<div class="col-md-12 form-inner-area">
+												<label for="field"><h3>Which Sector</h3></label>
+												<input type="text" name="field" class="form-control" placeholder="Write Here">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li class="disable" aria-disabled="true"><span class="js-btn-next" title="NEXT">Backward <i class="fa fa-arrow-right"></i></span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- div 2 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 2</span>
+									<div class="step-progress float-end">
+										<span>2 of 3 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:45%"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class = 'step2forcondition0 conditional' data-condition="#condition0 && service_name == 'NPK Calculator'">
+										<h2>Enter NPK</h2>
+										<p>Enter the Values of Nitrogen, Phosphorus and Potassium contents in your soil.</p>
+										<div class="form-inner-area">
+											<input type="number" name="nitrogen" class="form-control required" placeholder="Nitrogen *" required>
+											<input type="number" name="phosphorus" class="form-control required" placeholder="Phosphorus *" required>
+											<input type="number" name="potassium" class="form-control required" placeholder="Potassium *" required>
+											<!-- <input type="email" name="email" class="form-control required" placeholder="Email Address *" required>
+											<input type="text" name="phone" placeholder="Phone"> -->
+											<h4>(Optional) Help us improve our accuracy.</h4>
+											<input type="text" name="sensor" placeholder="Tell us how you calculated the values. (Sensor, Device, etc.)"> 
+										</div>
+									</div> 
+									<div class = 'step2forcondition1 conditional' data-condition="#condition1 && service_name == 'RCS Calculator'">
+										<h2>Location Information</h2>
+										<p>Enter your Farm's Location Details - State and District</p>
+										<!-- <div class="form-inner-area"> -->
+											<!-- <input type="text" name="state" class="form-control required" placeholder="State *" required> -->
+											<!-- <input type="text" name="city" class="form-control required" placeholder="City *" required> -->
+											<!-- <input type="email" name="email" class="form-control required" placeholder="Email Address *" required>
+											<input type="text" name="phone" placeholder="Phone"> -->
+											<!-- <h4>(Optional) Help us improve our accuracy.</h4>
+											<input type="text" name="sensor" placeholder="Tell us how you calculated the values. (Sensor, Device, etc.)">  -->
+										<!-- </div> -->
+										<div class="language-select">
+											<label> <h4>Choose your State</h4></label>
+											<select name="state">
+												{% for city in states %}
+													<option value={{ forloop.counter0 }}>{{city}}</li>
+												{% endfor %}
+											</select>
+											<br><br>
+											<label> <h4>Choose your District</h4></label>
+											<select name="district">
+												{% for dis in districts %}
+													<option value={{ forloop.counter0 }}>{{dis}}</li>
+												{% endfor %}
+											</select>
+										</div>
+									</div> 
+										<!-- <div class="gender-selection">
+										<h3>Gender:</h3>
+										<label>
+											<input type="radio" name="gender" value="Male">
+											<span class="checkmark"></span>Male
+										</label>
+										<label>
+											<input type="radio" name="gender" value="Female">
+											<span class="checkmark"></span>Female
+										</label>
+									</div> -->
+									<!-- <div class="upload-documents">
+										<h3>Upload Documents:</h3>
+										<div class="upload-araa bg-white">
+											<input type="hidden" value="" name="fileContent" id="fileContent">
+											<input type="hidden" value="" name="filename" id="filename">
+											<div class="upload-icon float-end">
+												<i class="fas fa-cloud-upload-alt"></i>
+											</div>
+											<div class="upload-text">
+												<span>( File accepted: pdf. doc/ docx -
+												Max file size : 150kb for demo limit )</span>
+											</div>
+											<div class="upload-option text-center">
+												<label for="attach">Upload The Documents</label>
+												<input id="attach" style="visibility:hidden;" type="file">
+											</div>
+										</div>
+									</div> -->
+									
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- div 3 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 3</span>
+									<div class="step-progress float-end">
+										<span>3 of 3 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:85%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>More details about your Field</h2>
+									<p>To provide you with the best results for you, we need a few more details</p>
+									<div class="conditional" data-condition="#condition0 && service_name == 'NPK Calculator'">
+										<div class="form-inner-area">
+											<input type="number" name="temp" placeholder="Temperature (Degree Celsius) *" > 
+											<input type="number" name="humidity" placeholder="Relative Humidity Percentage *" >
+											<input type="number" name="phval" placeholder="Soil pH Value (0-14) *" >
+											<input type="number" name="rainfall" placeholder="Rainfall in MM *" > 
+										</div>
+									</div>
+									<div class="conditional" data-condition="#condition1 && service_name == 'RCS Calculator'">
+										<div class="language-select">
+											<label> <h4>Choose your Crop</h4></label>
+											<select name="crop">
+												{% for x in crops %}
+													<option value={{ forloop.counter0 }}>{{x}}</li>
+												{% endfor %}
+											</select>
+										</div>
+										<br><br>
+										<label> <h4>Crop Season</h4></label>
+										
+										<!-- <div class="services-select-option">
+											<ul>
+												<li class="bg-white"><label>Kharif <input type="radio" name="season" value="0"></label></li>
+												<li class="bg-white"><label>Rabi <input type="radio" name="season" value="1"></label></li>
+												<li class="bg-white"><label>Zaid <input type="radio" name="season" value="3"></label></li>
+												<li class="bg-white"><label>Whole Year <input type="radio" name="season" value="2"></label></li>
+											</ul>
+										</div> -->
+										<div class="language-select">
+											<label> <h4>Season of Crop</h4></label>
+											<select name="season">
+												{% for x in seasons %}
+													<option value={{ forloop.counter0 }}>{{x}}</li>
+												{% endfor %}
+											</select>
+										</div>
+										<br><br>
+										<div class="language-select">
+											<label> <h4>Year Range</h4></label>
+											<select name="year">
+												{% for x in years %}
+													<option value={{ forloop.counter0 }}>{{x}}</li>
+												{% endfor %}
+											</select>
+										</div>
+										<br><br>
+										<div class="form-inner-area">
+											<label> <h4>Area under Cultivation</h4></label>
+											<input type="number" name="area">
+										</div>
+										<br>
+										<div class="form-inner-area">
+											<h4>(Optional) Help us grow.</h4>
+											<input type="text" name="farmowner" placeholder="Are you the Farm Owner or you work for Someone?"> 
+										</div>
+
+									</div>
+
+									<!-- <div class="conditional" data-condition="#condition0 && service_name == 'NPK Calculator'"> -->
+										<!-- <div class="form-inner-area">
+											<input type="number" name="temp" class="form-control required" placeholder="Temperature (Celsius) *" required>
+											<input type="number" name="humidity" class="form-control required" placeholder="Humidity Percentage *" required>
+											<input type="number" name="phval" class="form-control required" placeholder="Soil pH Value *" required>
+											<input type="number" name="rainfall" class="form-control required" placeholder="Rainfall in CM *" required>
+										</div> -->
+									<!-- </div> -->
+									<!-- <div class="conditional" data-condition="#condition1 && service_name == 'RCS Calculator'"> -->
+										<!-- <div class="form-inner-area">
+											<input type="number" name="temp" class="form-control required" placeholder="Temperature (Celsius) *" required>
+											<input type="number" name="humidity" class="form-control required" placeholder="Humidity Percentage *" required>
+											<input type="number" name="phval" class="form-control required" placeholder="Soil pH Value *" required>
+											<input type="number" name="rainfall" class="form-control required" placeholder="Rainfall in CM *" required>
+										</div> -->
+									<!-- </div> -->
+									<!-- <h2>More details about your Field</h2>
+									<p>To provide you with the best crop for your land, we need a few more details</p>
+									<div class="services-select-option">
+										<ul>
+											<li class="bg-white active"><label>Web Design <input type="radio" id="condition2" name="web_service" value="Web Design" checked></label></li>
+											<li class="bg-white"><label>Web Development <input type="radio" name="web_service" value="Web Development"></label></li>
+											<li class="bg-white"><label>Graphics Design <input type="radio" name="web_service" value="Graphics Design"></label></li>
+											<li class="bg-white"><label>SEO <input type="radio" name="web_service" value="SEO"></label></li>
+
+										</ul>
+									</div>
+									<div class="conditional" data-condition="#condition2 && web_service == 'Web Design'">
+										<div class="form-inner-area">
+										<label> <h3>Details</h3></label>
+											<input type="text" name="web_service_detail">
+										</div>
+									</div>
+									<div class="language-select">
+										<p>I want to browse projects in the following languages: </p>
+										<select name="languages">
+											<option>English</option>
+											<option>Arabic</option>
+											<option>Spanish</option>
+											<option>French</option>
+										</select>
+									</div>
+									<div class="comment-box">
+										<p><i class="fas fa-comments"></i> Write Somthing note</p>
+										<textarea name="full_comments" placeholder="Write here"></textarea>
+									</div> -->
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								{% csrf_token %}
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><button class="submit" type = "submit" title="SUBMIT">SUBMIT <i class="fa fa-arrow-right"></i></button></li>
+								<!-- <center><input type="submit" value="Submit"></center> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+		</form>
+	</div>
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/conditionize.flexible.jquery.min.js' %}"></script>
+	<script src="{% static 'assets/js/main.js' %}"></script>
+	<script src="{% static 'assets/js/switch.js' %}"></script>
+	<script>
+		$("#files").change(function() {
+			filename = this.files[0].name
+			// console.log(filename);
+		});
+
+		function UploadFile() {
+			var reader = new FileReader();
+			var file = document.getElementById('attach').files[0];
+			reader.onload = function() {
+				document.getElementById('fileContent').value = reader.result;
+				document.getElementById('filename').value = file.name;
+				document.getElementById('wizard').submit();
+			}
+			reader.readAsDataURL(file);
+		}
+
+		$(document).ready(function() {
+			$('.conditional').conditionize();
+		});
+	</script>
+</body>
+
+</html>

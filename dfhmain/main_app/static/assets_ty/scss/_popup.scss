@@ -1,0 +1,168 @@
+h1,p,h2,h3,h4 {
+	margin: 0;
+}
+a ,
+a:hover {
+	text-decoration: none;
+}
+.thank-you-wrapper {
+	margin: 70px 0px;
+	max-width: 1080px;
+	position: relative;
+	box-shadow: 0px 5px 79px 0px rgba(0, 0, 0, 0.29);
+	.thank-you-close {
+		position: absolute;
+		right: -20px;
+		top: -20px;
+		width: 48px;
+		height: 48px;
+		font-size: 19px;
+		font-weight: 700;
+		line-height: 40px;
+		border-radius: 100%;
+		background-color: #fff;
+		cursor: pointer;
+		transition: .3s all ease-in-out;
+		box-shadow: 0px 5px 59px 0px rgba(0, 0, 0, 0.56);
+		&:hover {
+			color: #fff;
+			background-color: #5756a2;
+		}
+	}
+	&.thank-wrapper-style-one {
+		padding: 90px 0px 150px;
+		.thank-txt {
+			margin: 0 auto;
+			max-width: 755px;
+			.thank-icon {
+				margin-bottom: 50px;
+			}
+			h1 {
+				font-size: 50px;
+				color: #5756a2;
+				font-weight: 700;
+				padding-bottom: 15px;
+			}
+			p {
+				font-size: 33px;
+				color: #5756a2;
+				padding-bottom: 65px;
+			}
+			a {
+				color: #fff;
+				height: 60px;
+				width: 220px;
+				margin: 0 auto;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 60px;
+				background-color: #5756a2;
+			}
+		}
+		.th-bottom-vector {
+			left: 25px;
+			bottom: 20px;
+		}
+	}
+	&.thank-wrapper-style-two {
+		.thank-txt {
+			padding: 80px 0px 50px;
+			background-image: linear-gradient( 0deg, rgb(65,97,177) 0%, rgb(73,86,173) 100%);
+			.text-area-thank {
+				max-width: 715px;
+				margin: 0 auto;
+				h1 {
+					color: #fff;
+					font-size: 50px;
+					font-weight: 700;	
+					padding-bottom: 15px;
+				}
+				p {
+					color: #fff;
+					font-size: 33px;
+				}
+			}
+		}
+		.thank-txt-part2 {
+			margin: 0 auto;
+			max-width: 720px;
+			padding: 85px 0px 65px;
+			a {
+				color: #61b348;
+				font-size: 33px;
+				margin-bottom: 10px;
+				text-decoration: underline;
+			}
+			p {
+				font-size: 33px;
+				color: #5756a2;
+			}
+			.okey-btn {
+				width: 100%;
+				height: 90px;
+				margin-top: 60px;
+				line-height: 90px;
+				border-radius: 3px;
+				background-color: #5756a2;
+				a {
+					color: #fff;
+					font-size: 25px;
+					font-weight: 500;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&.thank-wrapper-style-three {
+		background-size: cover;
+		padding-bottom: 100px;
+		background-image: url(../img/thbg3.png);
+		.thank-icon {
+			margin-top: 30px;
+		}
+		.thank-you-close {
+			top: 15px;
+			right: 5px;
+			color: #fff;
+			font-size: 20px;
+			box-shadow: none;
+			background-color: transparent;
+		}
+	}
+	&.thank-wrapper-style-four {
+		padding-bottom: 20px;
+		.thank-txt-part2 {
+			position: relative;
+			padding-top: 5px;
+			&:before {
+				left: 0;
+				right: 0;
+				top: -40px;
+				content: '';
+				height: 75px;
+				width: 120px;
+				margin: 0 auto;
+				position: absolute;
+				background-image: url(../img/tra.png);
+			}
+			.okey-btn {
+				margin-bottom: 30px;
+			}
+			span {
+				font-size: 26px;
+				font-weight: 600;
+				color: #5756a2;
+				margin-right: 60px;
+				img {
+					margin-right: 15px;
+				}
+			}
+		}
+		.thank-vectoritem {
+			bottom: 0;
+		}
+		.thank-vector3 {
+			right: 0
+		}
+	}
+}
