@@ -17,6 +17,6 @@
 ```python manage.py migrate```
 
 5. Run the Project
-```python manage.py runserver`
+```python manage.py runserver```
 
-Access the project on https://127.0.0.1:8000
+**Access the project on https://127.0.0.1:8000**
