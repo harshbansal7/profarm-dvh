@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
+
+
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework import permissions
 
 # IMPORTS
 
@@ -96,3 +101,27 @@ def home(request):
             'seasons':seasons,
         }
         return render(request, 'index.html', context)
+
+def apiview(request, n, p, k, soilph, humidity, temp, rainfall):
+    try:
+        received_data = [n, p,k, temp, humidity, soilph, rainfall]
+        testing_data = [np.array(received_data, dtype='float64')]
+
+        df_crop = pd.read_csv('main_app/csvfiles/npk.csv')
+        X = df_crop.drop(columns = 'label')
+        y = df_crop['label']
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=42)
+
+        knn = KNeighborsClassifier(n_neighbors=3)
+        knn.fit(X_train, y_train)
+
+        final_prediction = knn.predict(testing_data)
+
+        context = {
+            'crop_name':str.capitalize(str(final_prediction[0])),
+            'accuracy': round(knn.score(X_test, y_test) * 100, 2)
+        }
+        return JsonResponse(context, status=status.HTTP_200_OK)
+    except:
+        return JsonResponse('failed', safe = False, status=status.HTTP_404)
