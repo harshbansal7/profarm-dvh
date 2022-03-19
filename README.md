@@ -10,8 +10,7 @@ Machine Learning based Web Project to give Crop Predictions and Yield Prediction
 2. Create a Virtual Environment in the folder using - 
 ```
 pip install virtualenv
-```
-```
+
 virtualenv dfhproject
 ```
 
@@ -23,8 +22,7 @@ dfhproject\Scripts\activate
 3. Move to `dfhmain` and install required packages using -
 ```
 cd dfhmain
-``` 
-```
+
 pip install -r requirements.txt
 ```
 
