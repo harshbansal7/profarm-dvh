@@ -1,7 +1,7 @@
 # PROFARM
 Machine Learning based Web Project to give Crop Predictions and Yield Predictions on basis of data supplied by user, and an API to get the results for usage in creation of more apps. 
 
-## [Complete Idea Presentation / Guide](https://drive.google.com/file/d/1_w0nNs5kVpOpWKxZAfZIFpejrk4S2jiw/view?usp=sharing)
+## [Complete Idea Presentation / Guide](https://drive.google.com/file/u/1/d/1UYS_PrhvJkrv0IoZToAw1k1sOPqD3RgD/view?usp=sharing)
 
 ### [Use it Live | Profarm.ml](http://profarm.ml)
 The project is deployed on a VM by Google Cloud Platform. The VM is an `8-Core 32GB RAM` Windows Server 2022 based machine, capable of handling heavy loads incase the usage increases. The VM is scalable and specifications can be increased as per requirement. 
