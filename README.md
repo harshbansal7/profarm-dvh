@@ -3,6 +3,9 @@ Machine Learning based Web Project to give Crop Predictions and Yield Prediction
 
 ## [Complete Idea Presentation / Guide](https://drive.google.com/file/d/1_w0nNs5kVpOpWKxZAfZIFpejrk4S2jiw/view?usp=sharing)
 
+### [Use it Live | Profarm.ml](http://profarm.ml)
+The project is deployed on a VM by Google Cloud Platform. The VM is an `8-Core 32GB RAM` Windows Server 2022 based machine, capable of handling heavy loads incase the usage increases. The VM is scalable and specifications can be increased as per requirement. 
+
 ### Local Deployment on Windows
 
 1. Copy the `dfhmain` folder and `requirements.txt` file to a new folder.
