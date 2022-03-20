@@ -1,5 +1,5 @@
 # PROFARM
-Machine Learning based Web Project to give Crop Predictions and Yield Predictions on basis of data supplied by user. 
+Machine Learning based Web Project to give Crop Predictions and Yield Predictions on basis of data supplied by user, and an API to get the results for usage in creation of more apps. 
 
 ## [Complete Idea Presentation / Guide](https://drive.google.com/file/d/1_w0nNs5kVpOpWKxZAfZIFpejrk4S2jiw/view?usp=sharing)
 
