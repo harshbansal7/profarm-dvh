@@ -1,6 +1,8 @@
 # PROFARM
 Machine Learning based Web Project to give Crop Predictions and Yield Predictions on basis of data supplied by user, and an API to get the results for usage in creation of more apps. 
 
+Created during Digital Village Hackathon hosted by Thapar Institute of Engg. Technology Patiala, in 2022.
+
 ## [Complete Idea Presentation / Guide](https://drive.google.com/file/d/1QqNy5aPv9-BKmHkf6QdpnxvkOccBM--B/view?usp=sharing)
 
 <!-- ### [Use it Live | Profarm.ml](http://profarm.ml)
